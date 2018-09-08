@@ -1,0 +1,27 @@
+<!-- views/profile.ejs -->
+<%- contentFor('content') %>
+
+
+<div class="container">
+
+    <div class="page-header">
+        <h1><span class="fa fa-home"></span> Dash Board</h1>
+        <a href="/logout" class="btn btn-default btn-sm float-left">Logout</a>
+        Logged in user name: <%=user.email%><strong> </strong>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h3><span class="fa fa-user"></span> Logged in users list</h3>
+              
+                <div class="well">
+                    <p>
+                        <strong class="name">status</strong>: online <br>
+                        <strong class="email">Email</strong>:  <br>                       
+                    </p>
+                    <button onclick="location.href = 'chat/<%= user._id %>';" id="myButton" class="float-left submit-button" >Chat</button>
+                </div>           
+            </div>
+    </div>
+</div>
+
